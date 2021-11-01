@@ -1,0 +1,85 @@
+@import '_variables';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: $bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 20%;
+  height: 8%;
+  // background-color: red;
+  &__btn {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: box-shadow .1s ease;
+    &--lg {
+      width: 100%;
+      padding: 15 px;
+      text-align: left;
+    }
+    &--google {
+      background: #c62828;
+      color: #fff;
+    }
+    &--google:hover {
+      background: #ef5350;
+    }
+    &--facebook {
+      background: #283593;
+      color: #fff
+    }
+    &--facebook:hover {
+      background: #5c6bc0;
+    }
+    &--text {
+      margin-left: 10px;
+      font-size: 1.2rem;
+      font-weight: bold ;
+    }
+  }
+  &__btn:hover {
+    box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2),
+    0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12);
+    transition: box-shadow .1s ease;
+  }
+  &__user-name {
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .card {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 767px ) {
+  .card {
+    width: 90%;
+  }
+}
+
+.user-app {
+  display: none;
+}
